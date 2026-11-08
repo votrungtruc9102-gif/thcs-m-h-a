@@ -1,23 +1,24 @@
-import { defineConfig } from 'vite';
+\import path from 'path';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
-import tailwindcss from '@tailwindcss/vite';
-import { fileURLToPath } from 'node:url';
 
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, '.', '');
 
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('.', import.meta.url)),
+  return {
+    server: {
+      port: 3000,
+      host: '0.0.0.0',
     },
-  },
-
-  server: {
-    // Keep AI Studio HMR behavior
-    hmr: process.env.DISABLE_HMR !== 'true',
-
-    // Disable file watching during AI Studio edits
-    watch: process.env.DISABLE_HMR === 'true' ? null : {},
-  },
+    plugins: [react()],
+    define: {
+      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      }
+    }
+  };
 });
-
