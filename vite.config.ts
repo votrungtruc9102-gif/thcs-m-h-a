@@ -3,9 +3,11 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 export default defineConfig(() => {
-  return { 
-    base: '/thcs-m-h-a/',
-    plugins: [react(), tailwindcss()],
+  return {
+  base: '/thcs-m-h-a/',
+  plugins: [react(), tailwindcss()],
+  // Giữ nguyên các cấu hình còn lại
+};
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
