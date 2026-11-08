@@ -1,0 +1,600 @@
+DỰ ÁN: THCS MỸ HÒA – HỌC TẬP TRỰC TUYẾN
+I. VAI TRÒ VÀ NHIỆM VỤ
+Bạn là chuyên gia kiến trúc phần mềm, Full-stack Developer, Frontend Developer và UI/UX Designer chuyên xây dựng nền tảng giáo dục số dành cho học sinh THCS.
+Hãy xây dựng lại từ đầu một ứng dụng học tập trực tuyến hoàn chỉnh bằng tiếng Việt với tên gọi:
+THCS MỸ HÒA – HỌC TẬP TRỰC TUYẾN
+Đối tượng sử dụng:
+Học sinh lớp 6, 7, 8, 9.
+Giáo viên THCS.
+Giáo viên quản lý nội dung, ngân hàng câu hỏi và đề kiểm tra.
+Đơn vị sử dụng: Trường THCS Mỹ Hòa.
+Năm học: 2026–2027.
+Mục tiêu là tạo ra một nền tảng học tập hiện đại, sáng sủa, sinh động, thân thiện với học sinh và có các chức năng thực tế để phục vụ dạy học, ôn tập, kiểm tra và đánh giá.
+Đây là yêu cầu xây dựng một ứng dụng thực sự, không phải thiết kế giao diện minh họa hoặc tạo một trang landing page đơn giản.
+Hãy triển khai mã nguồn, các trang chức năng, hệ thống điều hướng, dữ liệu, xử lý nghiệp vụ và kiểm thử trong môi trường lập trình hiện có.
+Nếu đang bắt đầu một dự án mới, hãy xây dựng cấu trúc ứng dụng sạch, dễ bảo trì và có khả năng mở rộng. Nếu đã có mã nguồn dự án, hãy kiểm tra cấu trúc và các chức năng cần kế thừa trước khi quyết định thay thế.
+
+II. ĐỊNH HƯỚNG THIẾT KẾ GIAO DIỆN
+1. Phong cách thiết kế
+Thiết kế theo phong cách EdTech hiện đại, kết hợp nền tảng học tập trực tuyến và trải nghiệm học tập qua trò chơi.
+Các tiêu chí bắt buộc:
+Giao diện sáng, trẻ trung, thân thiện và chuyên nghiệp.
+Phù hợp với học sinh THCS, đặc biệt là học sinh lớp 6.
+Bố cục thoáng, nội dung dễ đọc, dễ tìm kiếm và dễ thao tác.
+Có hình minh họa giáo dục, biểu tượng trực quan, thẻ chức năng và hiệu ứng tương tác nhẹ.
+Thể hiện được bản sắc của Trường THCS Mỹ Hòa.
+Đồng bộ phong cách giữa trang chủ, trang học tập, trang quản lý giáo viên và các trang chức năng.
+Ưu tiên trải nghiệm thực tế trên máy tính, máy chiếu, máy tính bảng và điện thoại.
+Không thiết kế giao diện quá tối, quá nhiều màu neon, quá nhiều hiệu ứng hoặc có bố cục dày đặc.
+Không chỉ đổi màu giao diện cũ. Hãy xây dựng một hệ thống thiết kế thống nhất ngay từ đầu.
+2. Bảng màu chủ đạo
+Sử dụng bảng màu sáng:
+Nền tổng thể: #F5F9FF.
+Nền thẻ: #FFFFFF.
+Xanh dương chủ đạo: #2684FF.
+Xanh cyan: #22C7E8.
+Xanh lá: #22C55E.
+Vàng cam: #FFB020.
+Tím: #8B5CF6.
+Chữ chính: #172B4D.
+Chữ phụ: #64748B.
+Đường viền: #E2EAF5.
+Quy tắc sử dụng màu:
+Xanh dương dành cho thao tác chính và điều hướng.
+Xanh lá dành cho kết quả tích cực, hoàn thành và thành công.
+Vàng cam dành cho thành tích, huy hiệu và phần thưởng.
+Tím dành cho flashcard, khám phá kiến thức và nội dung ghi nhớ.
+Đỏ chỉ dùng cho lỗi, cảnh báo hoặc thao tác nguy hiểm.
+Có thể dùng gradient sáng ở khu vực Hero và một số thẻ nổi bật.
+Không dùng nền xanh đen trên diện tích lớn. Không phủ lớp tối lên ảnh nền. Không sử dụng quá nhiều màu trên cùng một thành phần.
+3. Kiểu chữ và hệ thống bố cục
+Sử dụng Be Vietnam Pro hoặc Inter, bảo đảm hiển thị đầy đủ tiếng Việt.
+Tiêu đề rõ ràng, có phân cấp.
+Nội dung dễ đọc, khoảng cách dòng hợp lý.
+Chiều rộng nội dung tối đa khoảng 1200–1280px trên màn hình lớn.
+Thẻ nội dung bo góc khoảng 14–22px.
+Bóng đổ nhẹ, đường viền tinh tế.
+Khoảng cách giữa các thành phần nhất quán.
+Biểu tượng thống nhất về phong cách và kích thước.
+Sử dụng các design token hoặc CSS variables để quản lý màu sắc, khoảng cách, kích thước chữ, bo góc và hiệu ứng.
+
+III. YÊU CẦU ĐẶC BIỆT: CHỌN MÔN HỌC VÀ KHỐI LỚP BẰNG CỬA SỔ TRƯỢT
+Đây là một yêu cầu bắt buộc của ứng dụng. Không sử dụng hai hộp chọn Môn học và Khối lớp nhỏ nằm ngang làm giao diện chọn chính.
+1. Nút mở cửa sổ trượt
+Trên thanh điều hướng, tạo một nút nổi bật:
+[Biểu tượng sách] Chọn môn & khối
+Nút hiển thị lựa chọn hiện tại dưới dạng nhãn ngắn, ví dụ:
+Môn: Tin học
+Khối: Lớp 6
+Khi người dùng nhấn vào nút này, mở một cửa sổ trượt có tên là SubjectGradeDrawer.
+Cửa sổ phải xuất hiện bằng hiệu ứng trượt mượt mà từ bên phải màn hình trên máy tính.
+Trên điện thoại, có thể chuyển thành cửa sổ trượt từ cạnh dưới lên, chiếm phần lớn chiều cao màn hình để thuận tiện thao tác.
+2. Thiết kế cửa sổ trượt
+Cửa sổ có nền trắng, bo góc phù hợp, bóng đổ nhẹ và lớp nền phía sau được làm mờ vừa phải.
+Cấu trúc gồm:
+Phần đầu cửa sổ
+Tiêu đề: “Chọn môn học và khối lớp”.
+Mô tả: “Lựa chọn nội dung phù hợp với chương trình học của bạn”.
+Nút đóng cửa sổ ở góc trên bên phải.
+Phần chọn khối lớp
+Hiển thị bốn thẻ lựa chọn riêng biệt:
+Lớp 6.
+Lớp 7.
+Lớp 8.
+Lớp 9.
+Mỗi thẻ có biểu tượng hoặc hình minh họa phù hợp, tên khối lớp rõ ràng và trạng thái được chọn nổi bật.
+Khi chọn một khối lớp:
+Thẻ được chọn có viền xanh dương.
+Có nền xanh nhạt.
+Xuất hiện dấu tích xác nhận.
+Các môn học và nội dung liên quan được lọc theo khối lớp nếu dữ liệu có sẵn.
+Phần chọn môn học
+Hiển thị các môn học dưới dạng lưới thẻ có biểu tượng, màu nhấn riêng và tên môn rõ ràng.
+Các môn cần hỗ trợ:
+Tin học.
+Toán.
+Ngữ văn.
+Tiếng Anh.
+Khoa học tự nhiên.
+Lịch sử và Địa lí.
+Công nghệ.
+Giáo dục công dân 
+Danh sách môn học phải lấy từ cấu hình hoặc dữ liệu của ứng dụng, không viết cứng danh sách trong nhiều component khác nhau.
+Ưu tiên Tin học là môn được triển khai nội dung mẫu đầy đủ trước tiên.
+Không tạo nội dung giả cho các môn chưa có dữ liệu. Nếu môn học chưa được xây dựng, hiển thị trạng thái “Đang cập nhật nội dung” hoặc thông báo phù hợp.
+Phần xem trước lựa chọn
+Hiển thị rõ:
+Môn học đã chọn.
+Khối lớp đã chọn.
+Số chủ đề hoặc số bài học có dữ liệu, nếu có.
+Phần nút thao tác cuối cửa sổ
+Có hai nút:
+“Hủy”: đóng cửa sổ và không áp dụng các lựa chọn chưa xác nhận.
+“Áp dụng lựa chọn”: xác nhận môn học và khối lớp.
+Nút áp dụng phải có trạng thái vô hiệu hóa nếu lựa chọn bắt buộc chưa hợp lệ.
+3. Quy tắc hoạt động
+Khi mở cửa sổ, hiển thị lựa chọn hiện tại.
+Người dùng có thể thay đổi môn và khối trong cùng một lần thao tác.
+Chỉ áp dụng lựa chọn khi nhấn nút xác nhận.
+Sau khi áp dụng, cập nhật lựa chọn trên thanh điều hướng và toàn bộ nội dung liên quan.
+Lọc đúng kho kiến thức, câu hỏi, bài luyện tập, flashcard, trò chơi và thống kê theo môn và khối đã chọn.
+Không trộn câu hỏi của các khối lớp hoặc môn học khác nhau.
+Khi chuyển môn hoặc khối, không tự ý xóa kết quả học tập đã lưu.
+Dữ liệu đang nhập dở cần được xử lý an toàn khi người dùng chuyển trang hoặc thay đổi lựa chọn.
+Lưu lựa chọn gần nhất vào bộ nhớ phù hợp nếu kiến trúc ứng dụng hỗ trợ. Nếu chưa có đăng nhập, có thể lưu cục bộ trên trình duyệt và phải thông báo rõ giới hạn.
+Có thể đóng cửa sổ bằng nút đóng, phím Escape hoặc nhấn vùng nền bên ngoài.
+Khóa thao tác cuộn nền khi cửa sổ đang mở.
+Hỗ trợ bàn phím, tiêu điểm và nhãn truy cập phù hợp.
+Trên màn hình nhỏ, các thẻ môn học và khối lớp tự sắp xếp để không tràn ngang.
+4. Thiết kế component riêng
+Tạo component có thể tái sử dụng:
+SubjectGradeTrigger: nút mở cửa sổ.
+SubjectGradeDrawer: cửa sổ trượt.
+GradeSelector: chọn khối lớp.
+SubjectSelector: chọn môn học.
+SelectionSummary: tóm tắt lựa chọn.
+DrawerActions: nút Hủy và Áp dụng lựa chọn.
+Sử dụng một nguồn trạng thái thống nhất cho môn học và khối lớp hiện tại.
+Không viết riêng logic lọc môn và khối ở từng trang theo cách thiếu nhất quán.
+
+IV. CẤU TRÚC TRANG CHỦ
+1. Thanh điều hướng
+Thiết kế thanh điều hướng nền trắng, có viền mảnh hoặc bóng đổ nhẹ.
+Bên trái:
+Logo hoặc biểu tượng giáo dục.
+Tên rút gọn “THCS MỸ HÒA”.
+Ở giữa hoặc khu vực phù hợp:
+Trang chủ.
+Kho kiến thức.
+Luyện tập.
+Game học tập.
+Bên phải:
+Nút “Chọn môn & khối” mở cửa sổ trượt.
+Khu vực tài khoản hoặc đăng nhập nếu hệ thống có chức năng này.
+Nút “Dành cho giáo viên”: Khi người dùng nhấn vào, mở cửa sổ xác thực mật khẩu để chuyển sang khu vực giáo viên. Không chuyển vai trò ngay khi nhấn nút.
+Trên điện thoại, sử dụng menu thu gọn và giữ nút chọn môn, khối ở vị trí dễ tìm.
+2. Khu vực Hero
+Thiết kế theo bố cục hai cột trên máy tính.
+Cột trái hiển thị:
+Nhãn:
+“TRƯỜNG THCS MỸ HÒA · NĂM HỌC 2026–2027”
+Tiêu đề:
+“Chinh phục tri thức số”
+Mô tả:
+“Nền tảng học tập trực tuyến giúp học sinh khám phá kiến thức, luyện tập trắc nghiệm, thử sức qua các trò chơi học tập.”
+Ba nút chức năng:
+1.“Trắc nghiệm”.
+2.“Khám phá kiến thức”.
+3.“Trò chơi học tập”.
+Các nút phải dẫn đến đúng chức năng thật.
+Cột phải:
+Hình minh họa học sinh THCS đang học tập, sử dụng máy tính và làm việc nhóm.
+Phong cách minh họa 2D hoặc 3D mềm mại, tươi sáng.
+Có sách, bóng đèn, biểu tượng máy tính, ngôi sao và các chi tiết giáo dục.
+Nền gradient sáng, không sử dụng ảnh tối toàn màn hình.
+Trên điện thoại, chuyển thành bố cục một cột.
+3. Thẻ thống kê học tập
+Tạo bốn thẻ thống kê:
+Ngân hàng câu hỏi.
+Bài luyện đã làm.
+Điểm số trung bình.
+Mỗi thẻ gồm:
+Biểu tượng.
+Tên chỉ số.
+Giá trị nổi bật.
+Mô tả ngắn.
+Màu nhấn riêng.
+Viền nhẹ, góc bo tròn và hiệu ứng hover.
+Các số liệu phải được lấy từ dữ liệu thật. Chỉ hiển thị số liệu minh họa khi đã ghi rõ là dữ liệu mẫu.
+Không cố định số lượng câu hỏi, lượt thi, điểm số hoặc số thẻ đã thuộc nếu dữ liệu có thể thay đổi.
+4. Khu vực chức năng chính
+A. Khu vực dành cho học sinh
+Chỉ hiển thị các chức năng phục vụ học tập:
+Kho kiến thức.
+Trắc nghiệm.
+Trò chơi học tập.
+Thống kê kết quả học tập cá nhân.
+Không hiển thị các mục “Ngân hàng câu hỏi”, “Tạo đề kiểm tra”, “Quản lý nội dung” hoặc các công cụ quản trị giáo viên trên giao diện học sinh.
+B. Khu vực dành cho giáo viên
+Hiển thị các chức năng phục vụ giảng dạy và quản lý:
+Kho kiến thức.
+Ngân hàng câu hỏi.
+Tạo đề kiểm tra.
+Quản lý trò chơi học tập.
+Thống kê và quản lý kết quả học tập theo quyền được cấp.
+Quản lý nội dung bài học.
+Nhập và xuất dữ liệu.
+Tải tài liệu lên và quản lý kho tài liệu giảng dạy.
+Thiết kế khu vực giáo viên thành một trang quản trị riêng, có thanh điều hướng hoặc menu quản lý rõ ràng.
+Các chức năng chỉ dành cho giáo viên phải được ẩn hoàn toàn khỏi menu, trang chủ và danh sách chức năng của học sinh.
+Chỉ hiển thị các chức năng mà vai trò hiện tại được phép sử dụng. Không chỉ ẩn nút ở giao diện mà còn phải kiểm tra quyền truy cập khi điều hướng và tại backend nếu đã triển khai backend.
+
+V. CÁC CHỨC NĂNG HỌC TẬP
+1. Kho kiến thức
+Tổ chức theo:
+Khối lớp 6, 7, 8, 9.
+Môn học.
+Chủ đề.
+Bài học.
+Mỗi bài học có:
+Tên bài.
+Mục tiêu học tập.
+Nội dung kiến thức trọng tâm.
+Ví dụ minh họa.
+Câu hỏi ôn tập.
+Nguồn tài liệu tham khảo nếu có.
+Cho phép tìm kiếm, lọc và mở bài học.
+Ưu tiên xây dựng dữ liệu mẫu có chất lượng cho môn Tin học THCS trước.
+Không tự khẳng định nội dung đúng với sách giáo khoa hoặc chương trình chính thức nếu chưa đối chiếu tài liệu gốc.
+2. Trắc nghiệm
+Học sinh có thể:
+Chọn môn học, khối lớp và chủ đề.
+Chọn số câu.
+Làm bài trắc nghiệm.
+Chọn đáp án.
+Chuyển câu trước và câu sau.
+Đánh dấu câu cần xem lại.
+Xem tiến độ làm bài.
+Nộp bài.
+Xem điểm số và kết quả.
+Xem đáp án đúng và lời giải thích sau khi nộp, theo cấu hình bài thi.
+Hệ thống phải tính điểm dựa trên đáp án được thiết lập trong dữ liệu câu hỏi.
+Không tự ý sửa đáp án hoặc nội dung câu hỏi của giáo viên.
+Xử lý chính xác các trường hợp bỏ trống câu trả lời, nộp bài nhiều lần, tải lại trang và dữ liệu không hợp lệ.
+3. Ngân hàng câu hỏi
+Cho phép giáo viên:
+Thêm câu hỏi.
+Sửa câu hỏi.
+Xóa câu hỏi sau khi xác nhận.
+Nhập nội dung và các phương án trả lời.
+Chọn đáp án đúng.
+Nhập lời giải thích.
+Gắn môn học, khối lớp, chủ đề và mức độ nhận thức.
+Nhập và xuất dữ liệu bằng JSON hoặc CSV theo cấu trúc được hỗ trợ.
+Tìm kiếm, lọc và sắp xếp câu hỏi.
+Phát hiện câu hỏi trùng lặp để giáo viên kiểm tra.
+Mỗi câu hỏi phải có cấu trúc dữ liệu thống nhất:
+Mã câu hỏi.
+Nội dung câu hỏi.
+Danh sách phương án.
+Đáp án đúng.
+Giải thích.
+Môn học.
+Khối lớp.
+Chủ đề.
+Mức độ nhận thức.
+Nguồn tài liệu.
+Có bước xác nhận trước khi xóa và kiểm tra dữ liệu nhập vào.
+4. Tạo đề kiểm tra
+Cho phép giáo viên:
+Chọn môn học và khối lớp.
+Chọn câu hỏi từ ngân hàng.
+Xác định số câu và điểm số.
+Phân bố câu hỏi theo mức độ nhận thức.
+Xem trước đề.
+Tạo đáp án.
+Tạo hướng dẫn chấm.
+Xuất đề và đáp án thành tài liệu có thể chỉnh sửa nếu môi trường hỗ trợ.
+Tổng điểm phải chính xác và nhất quán giữa đề kiểm tra, đáp án và hướng dẫn chấm.
+Không tự khẳng định đề đã phù hợp ma trận, bảng đặc tả hoặc yêu cầu cần đạt nếu chưa được kiểm tra với tài liệu gốc.
+5. Trò chơi học tập
+Xây dựng các trò chơi có thể sử dụng thực tế:
+Vòng quay may mắn.
+Ghép cặp câu hỏi và đáp án.
+Thử thách trả lời nhanh.
+Đoán từ khóa.
+Tính điểm và hiển thị kết quả.
+Các trò chơi sử dụng câu hỏi từ ngân hàng hoặc dữ liệu do giáo viên cung cấp.
+Cho phép chọn môn học, khối lớp và chủ đề phù hợp.
+Không chỉ tạo nút bấm hoặc hình ảnh minh họa mà không có cơ chế chơi.
+6. Thống kê học tập
+Hiển thị:
+Số bài đã làm.
+Số câu trả lời đúng.
+Tỉ lệ trả lời chính xác.
+Điểm số theo từng lần làm.
+Các chủ đề cần ôn tập.
+Tiến độ học tập.
+Số flashcard đã học và đã thuộc.
+Có thể sử dụng biểu đồ đơn giản, thanh tiến trình và huy hiệu.
+Mọi chỉ số phải tính từ dữ liệu thực tế. Không tạo thành tích giả hoặc tự suy diễn dữ liệu chưa có.
+7. Công cụ dành cho giáo viên
+Cung cấp khu vực quản lý phù hợp với quyền giáo viên:
+Quản lý nội dung bài học.
+Quản lý ngân hàng câu hỏi.
+Tạo đề kiểm tra.
+Quản lý bộ câu hỏi cho trò chơi.
+Nhập và xuất dữ liệu.
+Xem kết quả học tập theo quyền được cấp.
+Các chức năng quản lý phải có biểu mẫu nhập liệu rõ ràng, thông báo thành công hoặc lỗi và xác nhận trước các thao tác quan trọng.
+8. Tải tài liệu lên và quản lý tài liệu học tập
+Xây dựng chức năng dành riêng cho giáo viên với tên gọi “Tải tài liệu lên”, đặt trong khu vực quản trị giáo viên.
+A. Giao diện tải tài liệu
+Tạo một trang quản lý tài liệu có giao diện sáng, hiện đại, dễ sử dụng, gồm:
+Nút “+ Tải tài liệu lên”.
+Khu vực kéo thả tệp vào để tải lên.
+Nút chọn tệp từ máy tính.
+Danh sách tài liệu đã tải lên.
+Thanh tiến trình tải tệp.
+Thông báo thành công hoặc lỗi.
+Công cụ tìm kiếm, lọc và sắp xếp tài liệu.
+Khi nhấn “+ Tải tài liệu lên”, mở cửa sổ hoặc hộp thoại cho phép giáo viên chọn tệp và nhập thông tin tài liệu.
+B. Các loại tài liệu được hỗ trợ
+Cho phép giáo viên tải lên các loại tài liệu phù hợp với mục đích giảng dạy:
+Sách giáo khoa và tài liệu tham khảo ở định dạng PDF.
+Tài liệu Word: DOC, DOCX.
+Tài liệu bảng tính: XLS, XLSX, CSV.
+Tệp văn bản: TXT, MD.
+Tài liệu trình chiếu: PPT, PPTX.
+Hình ảnh bài học, sơ đồ và ảnh chụp trang sách.
+Tệp câu hỏi trắc nghiệm theo định dạng JSON hoặc CSV có cấu trúc quy định.
+Chỉ chấp nhận các định dạng được hệ thống hỗ trợ. Giới hạn dung lượng tệp phải được cấu hình rõ ràng và phù hợp với khả năng lưu trữ thực tế.
+C. Thông tin tài liệu
+Khi tải lên, giáo viên có thể khai báo:
+Tên tài liệu.
+Loại tài liệu.
+Môn học.
+Khối lớp.
+Chủ đề hoặc chương.
+Bài học liên quan.
+Năm học.
+Nguồn tài liệu.
+Ghi chú.
+Quyền sử dụng hoặc thông tin bản quyền khi cần.
+Môn học và khối lớp phải lấy từ hệ thống cấu hình chung, đồng bộ với chức năng chọn môn và khối của ứng dụng.
+Giáo viên có thể chỉnh sửa thông tin mô tả sau khi tải lên.
+D. Quản lý tài liệu đã tải lên
+Cho phép giáo viên:
+Xem danh sách tài liệu.
+Xem thông tin chi tiết.
+Mở hoặc tải tài liệu xuống.
+Tìm kiếm theo tên tài liệu.
+Lọc theo môn học, khối lớp, chủ đề và loại tệp.
+Sửa thông tin mô tả.
+Thay thế tệp bằng phiên bản mới.
+Xóa tài liệu sau khi xác nhận.
+Theo dõi ngày tải lên và người tải lên.
+Khi thay thế hoặc xóa tài liệu đang được bài học hoặc câu hỏi sử dụng, hệ thống phải cảnh báo và xử lý các liên kết liên quan an toàn.
+E. Kết nối với Kho kiến thức
+Sau khi tải tài liệu lên, giáo viên có thể chọn sử dụng tài liệu để:
+Làm nguồn tham khảo cho bài học.
+Đính kèm vào chủ đề hoặc bài học.
+Cung cấp tài liệu đọc thêm cho học sinh.
+Xây dựng nội dung ôn tập.
+Làm nguồn để giáo viên biên soạn câu hỏi.
+Tài liệu chỉ được đưa vào nội dung dành cho học sinh khi giáo viên chủ động cho phép hoặc xuất bản.
+F. Kết nối với Ngân hàng câu hỏi
+Cho phép giáo viên nhập câu hỏi trắc nghiệm từ tệp JSON hoặc CSV theo mẫu cấu trúc của hệ thống.
+Quy trình nhập câu hỏi:
+1.Chọn tệp câu hỏi.
+2.Đọc và kiểm tra cấu trúc tệp.
+3.Hiển thị bản xem trước.
+4.Kiểm tra câu hỏi thiếu nội dung, thiếu đáp án, sai định dạng hoặc trùng lặp.
+5.Cho phép giáo viên lựa chọn câu hỏi cần nhập.
+6.Xác nhận nhập vào Ngân hàng câu hỏi.
+7.Thông báo số câu nhập thành công và số câu bị bỏ qua hoặc có lỗi.
+Không tự động đưa toàn bộ nội dung trong tài liệu PDF, Word hoặc sách giáo khoa vào ngân hàng câu hỏi dưới dạng câu hỏi đã được xác minh.
+Nếu muốn trích xuất câu hỏi từ tài liệu, hãy xây dựng quy trình hỗ trợ trích xuất và cho phép giáo viên xem lại, chỉnh sửa, xác nhận trước khi lưu.
+G. Quyền truy cập và bảo mật
+Chức năng chỉ hiển thị với giáo viên có quyền phù hợp.
+Học sinh không được tải lên, sửa hoặc xóa tài liệu giảng dạy của giáo viên.
+Kiểm tra quyền truy cập cả ở giao diện và phía máy chủ khi có backend.
+Kiểm tra định dạng, dung lượng và tính hợp lệ của tệp.
+Không thực thi các tệp tải lên.
+Không cho phép truy cập công khai vào tài liệu nội bộ nếu chưa được cấp quyền.
+Không giả lập rằng tệp đã được lưu trên máy chủ nếu hệ thống chưa có dịch vụ lưu trữ thực tế.
+H. Xử lý tài liệu và giới hạn hệ thống
+Phân biệt rõ ba trạng thái:
+Đã tải lên: tệp được lưu thành công.
+Đã xử lý: hệ thống đã đọc hoặc trích xuất được nội dung theo khả năng hỗ trợ.
+Đã được giáo viên xác nhận: nội dung đã được kiểm tra và được phép sử dụng trong hoạt động dạy học.
+Đối với PDF scan hoặc hình ảnh, chỉ triển khai OCR khi có công cụ phù hợp. Đối với tài liệu dài, cần hỗ trợ xử lý theo trang hoặc từng phần.
+Không tuyên bố đã đọc toàn bộ tài liệu nếu việc trích xuất bị lỗi, thiếu trang hoặc chưa hoàn tất.
+Nếu chưa có backend hoặc dịch vụ l
+
+
+VI. QUẢN LÝ MÔN HỌC, KHỐI LỚP VÀ DỮ LIỆU
+Xây dựng cấu trúc dữ liệu thống nhất cho toàn bộ ứng dụng.
+Các thực thể chính gồm:
+Môn học.
+Khối lớp.
+Chủ đề.
+Bài học.
+Câu hỏi.
+Phương án trả lời.
+Đề kiểm tra.
+Kết quả học tập.
+Người dùng.
+Trò chơi và bộ câu hỏi trò chơi.
+Tài liệu giảng dạy và tài liệu học tập.
+Tệp đính kèm của bài học.
+Lịch sử phiên bản tài liệu.
+Nguồn tài liệu và thông tin bản quyền.
+Lịch sử nhập câu hỏi từ tệp.
+Mỗi tài liệu phải có mã định danh riêng, tên tệp, loại tệp, môn học, khối lớp, chủ đề, người tải lên, thời điểm tải lên và trạng thái xử lý.
+Tách riêng dữ liệu mô tả tài liệu và tệp thực tế. Lưu tệp trong hệ thống lưu trữ phù hợp, không chỉ lưu tên tệp trong cơ sở dữ liệu.
+Một tài liệu có thể được liên kết với nhiều bài học hoặc chủ đề khi phù hợp. Khi tài liệu được cập nhật, phải kiểm soát phiên bản để tránh làm sai lệch nội dung đã sử dụng trước đó.
+Mỗi nội dung cần được liên kết đúng môn học, khối lớp và chủ đề.
+Việc lựa chọn môn và khối trong SubjectGradeDrawer phải trở thành bộ lọc dùng chung cho các chức năng liên quan.
+Không tạo các bộ lọc riêng biệt có thể dẫn đến tình trạng trang chủ hiển thị một môn nhưng trang luyện tập lại hiển thị môn khác.
+Tách biệt:
+Dữ liệu cấu hình.
+Dữ liệu nội dung.
+Logic xử lý.
+Giao diện hiển thị.
+Dữ liệu mẫu phải được tổ chức khoa học, dễ bổ sung và chỉnh sửa.
+
+VII. CÔNG NGHỆ VÀ KIẾN TRÚC ỨNG DỤNG
+1. Công nghệ
+Sử dụng:	
+React.
+TypeScript.
+CSS hoặc hệ thống CSS phù hợp với dự án.
+Các component giao diện có thể tái sử dụng.
+Thư viện biểu tượng phù hợp nếu cần.
+Nếu đang khởi tạo dự án mới, lựa chọn công cụ build hiện đại phù hợp với React và TypeScript, ưu tiên cấu hình đơn giản, dễ triển khai.
+Không thêm thư viện không cần thiết.
+2. Tổ chức mã nguồn
+Phân chia các thành phần theo chức năng, ví dụ:
+components/layout
+components/navigation
+components/subject-grade
+components/ui
+pages/home
+pages/knowledge
+pages/practice
+pages/flashcards
+pages/question-bank
+pages/exam-builder
+pages/games
+pages/statistics
+pages/teacher
+data
+services
+hooks
+types
+utils
+Có thể điều chỉnh cấu trúc phù hợp với dự án thực tế nhưng phải bảo đảm dễ bảo trì, dễ mở rộng và không gom toàn bộ ứng dụng vào một tệp lớn.
+3. Trạng thái và điều hướng
+Sử dụng cơ chế quản lý trạng thái phù hợp với quy mô ứng dụng.
+Đảm bảo:
+Môn học và khối lớp được quản lý thống nhất.
+Điều hướng giữa các trang chính xác.
+Cửa sổ trượt chọn môn và khối hoạt động ổn định.
+Các bộ lọc được cập nhật nhất quán.
+Không mất dữ liệu ngoài ý muốn khi chuyển trang.
+4. Lưu trữ và backend
+Nếu chưa có backend:
+Có thể sử dụng dữ liệu mẫu và bộ lưu trữ cục bộ cho phiên bản thử nghiệm.
+Phải ghi rõ dữ liệu nào chỉ được lưu trên thiết bị hiện tại.
+Không giả lập rằng dữ liệu đã được đồng bộ lên máy chủ.
+Không tạo hệ thống đăng nhập giả nhưng tuyên bố có bảo mật thật.
+Nếu cần nhiều người dùng, phân quyền, lưu kết quả tập trung hoặc quản lý dữ liệu học sinh, hãy thiết kế backend và cơ sở dữ liệu phù hợp.
+Bảo vệ dữ liệu học sinh, xác thực người dùng và kiểm tra quyền truy cập ở phía máy chủ khi triển khai thực tế.
+Không đưa API key hoặc mật khẩu vào mã nguồn công khai.
+Hệ thống tải lên và lưu trữ tài liệu
+Thiết kế chức năng tải tài liệu theo kiến trúc có thể mở rộng.
+Frontend sử dụng React và TypeScript để chọn tệp, kiểm tra dữ liệu đầu vào, hiển thị tiến trình và thông báo kết quả.
+Backend tiếp nhận yêu cầu tải tệp, xác thực người dùng và kiểm tra quyền giáo viên.
+Tệp được lưu trong dịch vụ lưu trữ phù hợp; thông tin mô tả và đường dẫn lưu trữ được quản lý trong cơ sở dữ liệu.
+Không lưu tệp dung lượng lớn trực tiếp dưới dạng chuỗi trong cơ sở dữ liệu nếu không có lý do kỹ thuật phù hợp.
+Kiểm tra định dạng thực tế, dung lượng, tên tệp và quyền truy cập.
+Có thể tích hợp OCR hoặc trích xuất văn bản cho PDF, DOCX và hình ảnh nếu môi trường hỗ trợ.
+Có thể bổ sung chức năng hỗ trợ AI phân tích tài liệu trong tương lai, nhưng phải có bước giáo viên xem lại và xác nhận nội dung.
+Nếu chưa có backend hoặc dịch vụ lưu trữ, hãy triển khai giao diện thử nghiệm riêng, ghi rõ giới hạn và không hiển thị thông báo lưu thành công giả.
+Không đưa khóa bí mật hoặc thông tin xác thực vào mã nguồn frontend.
+
+
+VIII. RESPONSIVE VÀ KHẢ NĂNG TIẾP CẬN
+Ứng dụng phải hoạt động tốt trên:
+Máy tính để bàn.
+Máy tính xách tay.
+Máy tính bảng.
+Điện thoại Android.
+Quy tắc:
+Desktop: bố cục rộng, thanh điều hướng đầy đủ, cửa sổ chọn môn và khối trượt từ bên phải.
+Tablet: tự điều chỉnh lưới và khoảng cách.
+Mobile: menu thu gọn, cửa sổ chọn môn và khối trượt từ dưới lên hoặc hiển thị dạng toàn màn hình phù hợp.
+Không có thanh cuộn ngang ngoài ý muốn.
+Nút bấm đủ lớn để thao tác bằng cảm ứng.
+Có trạng thái focus rõ ràng.
+Hỗ trợ bàn phím khi có thể.
+Tôn trọng cài đặt giảm chuyển động của người dùng.
+Bảo đảm chữ tiếng Việt hiển thị đúng.
+Các trạng thái giao diện cần có:
+Đang tải.
+Không có dữ liệu.
+Tìm kiếm không có kết quả.
+Thao tác thành công.
+Thao tác thất bại.
+Lỗi kết nối.
+Không đủ quyền truy cập.
+
+IX. KẾ HOẠCH TRIỂN KHAI
+Xây dựng ứng dụng theo từng giai đoạn để bảo đảm chất lượng.
+Giai đoạn 1: Nền tảng và giao diện
+Khởi tạo cấu trúc dự án.
+Xây dựng hệ thống màu sắc và component cơ bản.
+Xây dựng thanh điều hướng.
+Xây dựng trang chủ.
+Xây dựng cửa sổ trượt SubjectGradeDrawer.
+Hoàn thiện lựa chọn môn học và khối lớp.
+Kiểm tra responsive.
+Giai đoạn 2: Chức năng học tập cốt lõi
+Kho kiến thức.
+Ngân hàng câu hỏi.
+Trắc nghiệm.
+Chấm điểm và hiển thị kết quả.
+Lưu dữ liệu phù hợp với kiến trúc hiện có.
+Giai đoạn 3: Công cụ giáo viên
+Thêm, sửa và xóa câu hỏi.
+Nhập và xuất dữ liệu.
+Phát hiện câu hỏi trùng lặp.
+Tạo đề kiểm tra.
+Tạo đáp án và hướng dẫn chấm.
+Quản lý nội dung học tập.
+Giai đoạn 4: Trò chơi và thống kê
+Vòng quay may mắn.
+Ghép cặp.
+Trả lời nhanh.
+Đoán từ khóa.
+Nghiêng đầu
+Thống kê kết quả và tiến độ học tập.
+Giai đoạn 5: Hoàn thiện
+Kiểm tra lỗi.
+Kiểm tra phân quyền.
+Kiểm tra dữ liệu đầu vào.
+Kiểm tra giao diện trên nhiều kích thước màn hình.
+Tối ưu tốc độ tải.
+Hoàn thiện tài liệu hướng dẫn sử dụng và triển khai.
+Ưu tiên hoàn thành một phiên bản MVP có thể chạy được trước, sau đó phát triển đầy đủ các chức năng còn lại.
+
+X. KIỂM THỬ VÀ NGHIỆM THU
+Sau khi xây dựng, phải thực hiện các kiểm tra sau:
+1.Chạy ứng dụng và sửa lỗi biên dịch.
+2.Kiểm tra các trang và điều hướng.
+3.Kiểm tra cửa sổ trượt chọn môn và khối.
+4.Kiểm tra việc áp dụng, hủy và đóng cửa sổ.
+5.Kiểm tra dữ liệu hiển thị sau khi đổi môn hoặc khối.
+6.Kiểm tra không trộn dữ liệu giữa các môn và khối.
+7.Kiểm tra làm bài, nộp bài, tính điểm và xem đáp án.
+8.Kiểm tra thêm, sửa, xóa và lưu câu hỏi.
+9.Kiểm tra tạo đề và tổng điểm.
+10.Kiểm tra flashcard và trò chơi.
+11.Kiểm tra dữ liệu trống, dữ liệu sai và các trường hợp ngoại lệ.
+12.Kiểm tra giao diện trên desktop, tablet và mobile.
+13.Kiểm tra TypeScript, lint và build theo cấu hình dự án.
+14.Kiểm tra các lỗi truy cập, liên kết chết và nút không hoạt động.
+15.Kiểm tra tải lên từng loại tệp được hỗ trợ.
+16.Kiểm tra tệp sai định dạng, tệp vượt giới hạn dung lượng và tệp bị lỗi.
+17.Kiểm tra tiến trình tải lên, thông báo thành công và xử lý khi tải lên thất bại.
+18.Kiểm tra mở, tải xuống, cập nhật và xóa tài liệu.
+19.Kiểm tra tìm kiếm và lọc theo môn học, khối lớp, chủ đề và loại tài liệu.
+20.Kiểm tra quyền giáo viên và học sinh.
+21.Kiểm tra việc liên kết tài liệu với bài học.
+22.Kiểm tra nhập câu hỏi từ JSON hoặc CSV, bao gồm bản xem trước, phát hiện trùng lặp và xử lý lỗi.
+23.Kiểm tra nội dung trích xuất từ PDF scan hoặc hình ảnh nếu có OCR.
+24.Kiểm tra việc cập nhật phiên bản và các liên kết đến tài liệu.
+25.Kiểm tra dữ liệu có được lưu và truy xuất đúng theo phương án lưu trữ thực tế hay không.
+Nếu môi trường hỗ trợ chạy thử hoặc chụp ảnh giao diện, hãy thực hiện kiểm tra trực quan và sửa các lỗi phát hiện được.
+Không tuyên bố đã kiểm thử thành công nếu chưa thực sự chạy các bước kiểm tra.
+
+XI. YÊU CẦU ĐẦU RA
+Hãy trực tiếp xây dựng các tệp mã nguồn cần thiết để tạo ứng dụng.
+Kết quả phải bao gồm:
+Ứng dụng có thể chạy được.
+Giao diện sáng, hiện đại, sinh động và thống nhất.
+Trang chủ hoàn chỉnh.
+Cửa sổ trượt chọn môn học và khối lớp.
+Các chức năng học tập cốt lõi.
+Cấu trúc dữ liệu rõ ràng.
+Dữ liệu mẫu được ghi chú chính xác.
+Các chức năng quản lý giáo viên theo phạm vi triển khai.
+Khả năng hiển thị tốt trên nhiều thiết bị.
+Hướng dẫn cài đặt, chạy và cấu hình ứng dụng.
+Báo cáo rõ chức năng nào đã hoàn thành, chức năng nào cần backend hoặc cấu hình thêm.
+Không chỉ đưa ra kế hoạch hoặc các đoạn mã rời rạc.
+Không bỏ qua những chức năng đã nêu mà không thông báo.
+Không tạo các nút giả hoặc số liệu thành tích giả.
+Không tự ý tuyên bố ứng dụng đã hoàn chỉnh nếu còn lỗi hoặc chức năng chưa hoạt động.
+MỤC TIÊU CUỐI CÙNG: Xây dựng nền tảng “THCS MỸ HÒA – HỌC TẬP TRỰC TUYẾN” có giao diện sáng, đẹp, sinh động, thân thiện với học sinh THCS; có hệ thống chọn môn học và khối lớp bằng cửa sổ trượt; đồng thời có kiến trúc rõ ràng để tiếp tục phát triển thành một hệ thống học tập thực tế phục vụ giáo viên và học sinh.

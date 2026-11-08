@@ -1,0 +1,6 @@
+{
+  "name": "THCS Mỹ Hòa – Học Tập Trực Tuyến",
+  "description": "Nền tảng học tập trực tuyến hiện đại dành cho học sinh và giáo viên Trường THCS Mỹ Hòa năm học 2026-2027.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
